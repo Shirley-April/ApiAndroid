@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Courses"></activity>
+        <activity android:name=".ProgressBarActivity"></activity>
+        <activity android:name=".SplashActivity" />
+        <activity android:name=".CoursesActivity" />
+        <activity android:name=".Course" />
+        <activity android:name=".Courses" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
