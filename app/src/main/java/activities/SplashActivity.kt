@@ -1,9 +1,11 @@
-package com.example.myhello
+package activities
 
+import CoursesActivity
 import android.content.Intent
 import android.os.Bundle
 import android.preference.PreferenceManager
 import androidx.appcompat.app.AppCompatActivity
+import ke.co.hello.R
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

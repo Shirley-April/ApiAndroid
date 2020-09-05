@@ -1,5 +1,6 @@
-package com.example.myhello
+package apis
 
+import models.RegistrationResponse
 import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.http.Body

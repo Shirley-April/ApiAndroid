@@ -1,12 +1,13 @@
-package com.example.myhello
+package activities
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.provider.Settings.Global.putString
 import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
+import apis.ApiClient
+import apis.ApiInterface
+import models.LoginResponse
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -49,7 +50,8 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Login data available", Toast.LENGTH_SHORT).show()
 
 
-            val apiClient = ApiClient.buildService(ApiInterface::class.java)
+            val apiClient =
+                ApiClient.buildService(ApiInterface::class.java)
             val loginCall = apiClient.getLogin("Bearer " + accessToken)
             loginCall.enqueue(object : Callback<LoginResponse> {
                 override fun onFailure(call: Call<LoginResponse>, t: Throwable) {

@@ -1,10 +1,10 @@
-package com.example.myhello
+package activities
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.row_course_item.view.*
+import models.Course
 
 class CoursesAdapter(var courseList: List<Course>) :
     RecyclerView.Adapter<CoursesAdapter.CoursesViewHolder>() {
